@@ -1478,43 +1478,39 @@ namespace RasterViewport.Views
         {
             double parcent = ScaleFactor * 100;
 
-            if (parcent > 100)
+            if (parcent >= 200)
             {
                 parcent += increasing ? 100 : -100;
             }
-            else if (parcent == 100)
+            else if (parcent >= 100)
             {
                 parcent += increasing ? 100 : -25;
             }
-            else if (parcent > 25)
+            else if (parcent >= 50)
             {
                 parcent += increasing ? 25 : -25;
             }
-            else if (parcent == 25)
+            else if (parcent >= 25)
             {
                 parcent += increasing ? 25 : -5;
             }
-            else if (parcent > 5)
+            else if (parcent >= 10)
             {
                 parcent += increasing ? 5 : -5;
             }
-            else if (parcent == 5)
+            else if (parcent >= 5)
             {
                 parcent += increasing ? 5 : -2.5;
             }
-            else if (parcent > 2.5)
-            {
-                parcent += increasing ? 2.5 : -2.5;
-            }
-            else if (parcent == 2.5)
+            else if (parcent >= 2.5)
             {
                 parcent += increasing ? 2.5 : -0.5;
             }
-            else if (parcent > 0.5)
+            else if (parcent >= 0.5)
             {
                 parcent += increasing ? 0.5 : -0.5;
             }
-            else if (parcent == 0.5)
+            else
             {
                 parcent += increasing ? 0.5 : 0;
             }
